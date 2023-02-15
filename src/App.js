@@ -22,25 +22,9 @@ class App extends Component {
       },
     ],
   };
+
   render() {
-    const characters = [
-      {
-        name: "Charlie",
-        job: "Janitor",
-      },
-      {
-        name: "Mac",
-        job: "Bouncer",
-      },
-      {
-        name: "Dee",
-        job: "Aspiring Actress",
-      },
-      {
-        name: "Dennis",
-        job: "Bartender",
-      },
-    ];
+    const { characters } = this.state;
     return (
       <div className="container">
         <Table characterData={characters} />
@@ -48,5 +32,15 @@ class App extends Component {
     );
   }
 }
+
+removeCharacter = (index) => {
+  const { characters } = this.state;
+
+  this.setState({
+    characters: characters.filter((character, i) => {
+      return i !== index;
+    }),
+  });
+};
 
 export default App;
