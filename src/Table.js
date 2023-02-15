@@ -33,3 +33,14 @@ const TableBody = () => {
     </tbody>
   );
 };
+
+class Table extends Component {
+  render() {
+    return (
+      <table>
+        <TableHeader />
+        <TableBody />
+      </table>
+    );
+  }
+}
