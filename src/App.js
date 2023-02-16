@@ -25,6 +25,7 @@ class App extends Component {
           characterData={characters}
           removeCharacter={this.removeCharacter}
         />
+        <Form />
       </div>
     );
   }
